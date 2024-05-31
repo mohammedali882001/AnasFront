@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Cards</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Ensure the container takes up full viewport height */
+      .container {
+        height: 100vh;
+      }
+
+      .card {
+        width: 100%; /* Full width within the column */
+      }
+
+      .list-group-item {
+        text-align: center; /* Center the text in the list items */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div class="row">
+        <div class="col-md-4" *ngFor="let info of Drivers">
+          <div class="card mb-4">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Driver ID : {{ info.DriverID }}</li>
+              <li class="list-group-item">
+                Driver Name : {{ info.DriverName }}
+              </li>
+              <li class="list-group-item">
+                Driver Phone : {{ info.PhoneNumber }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Angular and other necessary scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Your Angular app script -->
+  </body>
+</html>
